@@ -117,7 +117,7 @@ const productGroups = [
 const highlights = [
   { value: '2003', label: 'Established' },
   { value: '15-1500', label: 'KVA DG Sets' },
-  { value: 'SAARC', label: 'Export Markets' },
+  { value: '5+', label: 'Export Countries' },
   { value: 'Multi-brand', label: 'Spares Support' },
 ];
 
@@ -125,20 +125,24 @@ function App() {
   const featuredProducts = productGroups.flatMap((group) => group.items).slice(0, 28);
 
   return (
-    <div className="min-h-screen bg-stone-50 font-sans text-slate-900">
-      <nav className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/95 text-white shadow-lg backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6">
-          <a href="#" className="text-xl font-black tracking-tight sm:text-2xl">
-            SMS <span className="text-orange-500">ENGINEERING</span>
+    <div className="min-h-screen bg-white font-sans text-slate-900">
+      <nav className="sticky top-0 z-50 border-b border-red-100 bg-white/95 shadow-md backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2 sm:px-6">
+          <a href="#" className="flex h-20 w-[280px] items-center overflow-hidden bg-white sm:h-24 sm:w-[430px]">
+            <img
+              src="/sms-engineering-logo-white.png"
+              className="h-full w-full object-contain"
+              alt="SMS Engineering"
+            />
           </a>
-          <div className="hidden items-center gap-6 text-sm font-medium text-slate-300 md:flex">
-            <a href="#about" className="hover:text-white">About</a>
-            <a href="#products" className="hover:text-white">Products</a>
-            <a href="#contact" className="hover:text-white">Contact</a>
+          <div className="hidden items-center gap-6 text-sm font-bold text-slate-700 md:flex">
+            <a href="#about" className="hover:text-red-600">About</a>
+            <a href="#products" className="hover:text-red-600">Products</a>
+            <a href="#contact" className="hover:text-red-600">Contact</a>
           </div>
           <a
             href="tel:+919910232610"
-            className="flex items-center gap-2 rounded-full bg-orange-500 px-4 py-2 text-sm font-bold text-white transition hover:bg-orange-600"
+            className="flex items-center gap-2 rounded-full bg-red-600 px-4 py-2 text-sm font-bold text-white transition hover:bg-red-700"
           >
             <Phone size={17} />
             <span className="hidden sm:inline">Call Now</span>
@@ -146,34 +150,34 @@ function App() {
         </div>
       </nav>
 
-      <header className="relative overflow-hidden bg-slate-950 text-white">
+      <header className="relative overflow-hidden bg-white text-slate-950">
         <img
           src="https://images.unsplash.com/photo-1581092921461-39b9d08a9b21?auto=format&fit=crop&q=80&w=1600"
-          className="absolute inset-0 h-full w-full object-cover opacity-35"
+          className="absolute inset-0 h-full w-full object-cover opacity-14"
           alt="Industrial machinery workshop"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/88 to-slate-950/35" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-red-50/75" />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
           <div className="max-w-3xl">
-            <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-orange-400/30 bg-orange-500/10 px-4 py-2 text-sm font-semibold text-orange-200">
+            <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-red-200 bg-red-50 px-4 py-2 text-sm font-semibold text-red-700">
               <Factory size={17} /> Industrial spares, DG sets, hydraulics and concrete equipment support
             </p>
             <h1 className="text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">
-              Reliable engineering supply partner since <span className="text-orange-500">2003</span>
+              Reliable engineering supply partner since <span className="text-red-600">2003</span>
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-700">
               SMS Engineering has grown step by step from DG set sales, service and maintenance into a supplier and exporter of imported machinery spares, hydraulic filters, engine parts, earth moving spares and concrete pump components.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
                 href="#products"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-orange-500 px-6 py-3 font-bold text-white shadow-xl shadow-orange-950/30 transition hover:bg-orange-600"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-red-600 px-6 py-3 font-bold text-white shadow-xl shadow-red-200 transition hover:bg-red-700"
               >
                 Explore Products <ChevronRight size={18} />
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center rounded-full border border-white/25 px-6 py-3 font-bold text-white transition hover:bg-white hover:text-slate-950"
+                className="inline-flex items-center justify-center rounded-full border border-red-200 bg-white px-6 py-3 font-bold text-red-700 transition hover:border-red-600 hover:bg-red-50"
               >
                 Send Enquiry
               </a>
@@ -182,9 +186,9 @@ function App() {
 
           <div className="grid content-end gap-4 sm:grid-cols-2 lg:pt-20">
             {highlights.map((item) => (
-              <div key={item.label} className="rounded-lg border border-white/10 bg-white/10 p-5 backdrop-blur">
-                <p className="text-3xl font-black text-white">{item.value}</p>
-                <p className="mt-1 text-sm font-medium text-slate-300">{item.label}</p>
+              <div key={item.label} className="rounded-lg border border-red-100 bg-white/85 p-5 shadow-lg shadow-red-100/60 backdrop-blur">
+                <p className="text-3xl font-black text-red-700">{item.value}</p>
+                <p className="mt-1 text-sm font-bold text-slate-600">{item.label}</p>
               </div>
             ))}
           </div>
@@ -195,7 +199,7 @@ function App() {
         <section id="about" className="bg-white py-18">
           <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <div>
-              <p className="text-sm font-black uppercase tracking-[0.2em] text-orange-600">About SMS Engineering</p>
+              <p className="text-sm font-black uppercase tracking-[0.2em] text-red-600">About SMS Engineering</p>
               <h2 className="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
                 From DG sets to imported machinery spares
               </h2>
@@ -210,12 +214,12 @@ function App() {
             <div className="grid gap-4 sm:grid-cols-2">
               {[
                 { icon: ShieldCheck, title: 'Quality Focused', text: 'Products are selected to match the quality expectations of industrial users.' },
-                { icon: Globe2, title: 'Import & Export', text: 'Imported spare parts with export support for SAARC countries including Nepal, Bhutan and Bangladesh.' },
+                { icon: Globe2, title: 'Import & Export', text: 'Imported spare parts supplied across India and exported to Nepal, Bhutan, Bangladesh, Tanzania and Kenya.' },
                 { icon: Wrench, title: 'Service Background', text: 'Hands-on experience in DG set service, maintenance and industrial equipment support.' },
                 { icon: Filter, title: 'Wide Inventory', text: 'Filters, engine spares, hydraulic systems, pump spares and earth moving components.' },
               ].map((item) => (
-                <div key={item.title} className="rounded-lg border border-slate-200 bg-stone-50 p-6 shadow-sm">
-                  <item.icon className="mb-4 text-orange-500" size={34} />
+                <div key={item.title} className="rounded-lg border border-red-100 bg-white p-6 shadow-sm shadow-red-100/50">
+                  <item.icon className="mb-4 text-red-600" size={34} />
                   <h3 className="text-xl font-black text-slate-950">{item.title}</h3>
                   <p className="mt-2 leading-7 text-slate-600">{item.text}</p>
                 </div>
@@ -224,30 +228,30 @@ function App() {
           </div>
         </section>
 
-        <section id="products" className="bg-slate-950 py-16 text-white">
+        <section id="products" className="border-y border-red-100 bg-red-50 py-16 text-slate-950">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <div className="max-w-3xl">
-              <p className="text-sm font-black uppercase tracking-[0.2em] text-orange-400">Product Range</p>
+              <p className="text-sm font-black uppercase tracking-[0.2em] text-red-600">Product Range</p>
               <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl">
                 Spares and systems for concrete, power, hydraulic and earth moving industries
               </h2>
-              <p className="mt-5 text-lg leading-8 text-slate-300">
+              <p className="mt-5 text-lg leading-8 text-slate-700">
                 A broad range under one roof, selected for dependable use across industrial and construction requirements.
               </p>
             </div>
 
             <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
               {productGroups.map((group) => (
-                <article key={group.title} className="rounded-lg border border-white/10 bg-white/[0.06] p-6 shadow-xl shadow-black/10">
+                <article key={group.title} className="rounded-lg border border-red-100 bg-white p-6 shadow-xl shadow-red-100/70">
                   <div className="mb-5 flex items-center gap-3">
-                    <span className="grid h-12 w-12 place-items-center rounded-lg bg-orange-500/15 text-orange-300">
+                    <span className="grid h-12 w-12 place-items-center rounded-lg bg-red-50 text-red-600">
                       <group.icon size={26} />
                     </span>
                     <h3 className="text-xl font-black leading-tight">{group.title}</h3>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {group.items.map((item) => (
-                      <span key={item} className="rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-sm text-slate-200">
+                      <span key={item} className="rounded-full border border-red-100 bg-red-50 px-3 py-1.5 text-sm font-semibold text-slate-700">
                         {item}
                       </span>
                     ))}
@@ -258,11 +262,11 @@ function App() {
           </div>
         </section>
 
-        <section className="bg-stone-50 py-16">
+        <section className="bg-white py-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <div className="grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:items-start">
               <div>
-                <p className="text-sm font-black uppercase tracking-[0.2em] text-orange-600">Quick Catalogue</p>
+                <p className="text-sm font-black uppercase tracking-[0.2em] text-red-600">Quick Catalogue</p>
                 <h2 className="mt-3 text-3xl font-black tracking-tight text-slate-950">Popular items customers ask for</h2>
                 <p className="mt-4 leading-7 text-slate-600">
                   This is a compact view for fast scanning on mobile and desktop. Customers can still ask for any related spare or machinery part through the enquiry form.
@@ -270,8 +274,8 @@ function App() {
               </div>
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {featuredProducts.map((product) => (
-                  <div key={product} className="flex items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3 shadow-sm">
-                    <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-orange-500" />
+                  <div key={product} className="flex items-center gap-3 rounded-lg border border-red-100 bg-white px-4 py-3 shadow-sm">
+                    <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-red-600" />
                     <span className="text-sm font-semibold text-slate-700">{product}</span>
                   </div>
                 ))}
@@ -282,42 +286,43 @@ function App() {
 
         <section id="contact" className="bg-white py-16">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
-            <div className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-2xl shadow-slate-200/70 md:grid md:grid-cols-[0.85fr_1.15fr]">
-              <div className="bg-slate-950 p-8 text-white sm:p-10">
-                <p className="text-sm font-black uppercase tracking-[0.2em] text-orange-400">Contact</p>
+            <div className="overflow-hidden rounded-lg border border-red-100 bg-white shadow-2xl shadow-red-100/80 md:grid md:grid-cols-[0.85fr_1.15fr]">
+              <div className="bg-red-700 p-8 text-white sm:p-10">
+                <p className="text-sm font-black uppercase tracking-[0.2em] text-red-100">Contact</p>
                 <h2 className="mt-3 text-3xl font-black">Send your requirement</h2>
-                <p className="mt-4 leading-7 text-slate-300">
+                <p className="mt-4 leading-7 text-red-50">
                   Share the part name, machine model, quantity or project requirement. The team can help with DG sets, filters, hydraulic components, control panels and construction equipment spares.
                 </p>
                 <div className="mt-8 space-y-5">
                   <div className="flex gap-4">
-                    <Phone className="mt-1 shrink-0 text-orange-400" />
+                    <Phone className="mt-1 shrink-0 text-red-100" />
                     <div>
                       <p className="font-bold">Phone</p>
-                      <a href="tel:+919910232610" className="text-slate-300 hover:text-white">+91 99102 32610</a>
+                      <a href="tel:+919910232610" className="text-red-50 hover:text-white">+91 99102 32610</a>
                     </div>
                   </div>
                   <div className="flex gap-4">
-                    <MapPin className="mt-1 shrink-0 text-orange-400" />
+                    <MapPin className="mt-1 shrink-0 text-red-100" />
                     <div>
-                      <p className="font-bold">Service Area</p>
-                      <p className="text-slate-300">India and SAARC export markets</p>
+                      <p className="font-bold">Address</p>
+                      <p className="text-red-50">LG-22, Nehru Complex, Pandav Nagar, Delhi - 110092</p>
+                      <p className="mt-1 text-sm text-red-100">Near Hero Honda Showroom and Mother Dairy</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
-                    <ExternalLink className="mt-1 shrink-0 text-orange-400" />
+                    <ExternalLink className="mt-1 shrink-0 text-red-100" />
                     <div>
                       <p className="font-bold">Website</p>
-                      <a href="https://www.smsconcretesolution.in" className="text-slate-300 hover:text-white">
+                      <a href="https://www.smsconcretesolution.in" className="text-red-50 hover:text-white">
                         www.smsconcretesolution.in
                       </a>
                     </div>
                   </div>
                   <div className="flex gap-4">
-                    <BatteryCharging className="mt-1 shrink-0 text-orange-400" />
+                    <BatteryCharging className="mt-1 shrink-0 text-red-100" />
                     <div>
                       <p className="font-bold">Core Supply</p>
-                      <p className="text-slate-300">DG sets, machinery spares, hydraulics and control systems</p>
+                      <p className="text-red-50">DG sets, machinery spares, hydraulics and control systems</p>
                     </div>
                   </div>
                 </div>
@@ -327,17 +332,17 @@ function App() {
                 <div className="grid gap-5 sm:grid-cols-2">
                   <label className="block">
                     <span className="mb-2 block text-sm font-bold text-slate-700">Your Name</span>
-                    <input type="text" className="w-full rounded-lg border border-slate-300 p-3 outline-none transition focus:border-orange-500 focus:ring-2 focus:ring-orange-500/30" />
+                    <input type="text" className="w-full rounded-lg border border-slate-300 p-3 outline-none transition focus:border-red-600 focus:ring-2 focus:ring-red-500/30" />
                   </label>
                   <label className="block">
                     <span className="mb-2 block text-sm font-bold text-slate-700">Phone Number</span>
-                    <input type="tel" className="w-full rounded-lg border border-slate-300 p-3 outline-none transition focus:border-orange-500 focus:ring-2 focus:ring-orange-500/30" />
+                    <input type="tel" className="w-full rounded-lg border border-slate-300 p-3 outline-none transition focus:border-red-600 focus:ring-2 focus:ring-red-500/30" />
                   </label>
                 </div>
 
                 <label className="block">
                   <span className="mb-2 block text-sm font-bold text-slate-700">Requirement Type</span>
-                  <select className="w-full rounded-lg border border-slate-300 bg-white p-3 outline-none transition focus:border-orange-500 focus:ring-2 focus:ring-orange-500/30">
+                  <select className="w-full rounded-lg border border-slate-300 bg-white p-3 outline-none transition focus:border-red-600 focus:ring-2 focus:ring-red-500/30">
                     <option>Select requirement...</option>
                     <option>Diesel Generator Set</option>
                     <option>Hydraulic / Industrial Machinery</option>
@@ -350,10 +355,10 @@ function App() {
 
                 <label className="block">
                   <span className="mb-2 block text-sm font-bold text-slate-700">Part Details / Machine Model / Quantity</span>
-                  <textarea rows={5} className="w-full rounded-lg border border-slate-300 p-3 outline-none transition focus:border-orange-500 focus:ring-2 focus:ring-orange-500/30" />
+                  <textarea rows={5} className="w-full rounded-lg border border-slate-300 p-3 outline-none transition focus:border-red-600 focus:ring-2 focus:ring-red-500/30" />
                 </label>
 
-                <button className="w-full rounded-lg bg-orange-500 py-4 font-black text-white shadow-lg shadow-orange-200 transition hover:-translate-y-0.5 hover:bg-orange-600">
+                <button className="w-full rounded-lg bg-red-600 py-4 font-black text-white shadow-lg shadow-red-200 transition hover:-translate-y-0.5 hover:bg-red-700">
                   SEND INQUIRY
                 </button>
               </form>
@@ -362,10 +367,10 @@ function App() {
         </section>
       </main>
 
-      <footer className="border-t border-slate-800 bg-slate-950 py-6 text-center text-slate-400">
+      <footer className="border-t border-red-100 bg-white py-6 text-center text-slate-600">
         <div className="mx-auto max-w-7xl px-4">
           <p className="text-sm">&copy; 2026 SMS Engineering. Established 2003.</p>
-          <a href="https://www.smsconcretesolution.in" className="mt-2 inline-block text-sm font-semibold text-orange-400 hover:text-orange-300">
+          <a href="https://www.smsconcretesolution.in" className="mt-2 inline-block text-sm font-semibold text-red-600 hover:text-red-700">
             www.smsconcretesolution.in
           </a>
         </div>
