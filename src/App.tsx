@@ -98,7 +98,7 @@ const productGroups = [
   {
     title: 'Electrical & Control Panels',
     icon: CircuitBoard,
-    image: null,
+    image: '/images/electrical-panel.jpg',
     items: [
       'Power Distribution Boards',
       'Electric Control Panels',
@@ -112,7 +112,7 @@ const productGroups = [
   {
     title: 'Wear Parts, Seals & Fabrication',
     icon: Cog,
-    image: null,
+    image: '/images/wear-parts.jpg',
     items: [
       'Sealing Cone',
       'Sealing Ring',
