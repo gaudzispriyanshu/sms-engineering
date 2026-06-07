@@ -375,7 +375,7 @@ function App() {
         {/* ── RMC ── */}
         <section id="rmc" className="relative overflow-hidden bg-slate-950 py-20 text-white">
           {/* subtle background texture */}
-          <div className="absolute inset-0 opacity-[0.04]" style={{backgroundImage: 'repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%)', backgroundSize: '12px 12px'}} />
+          <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%)', backgroundSize: '12px 12px' }} />
 
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
 
@@ -393,7 +393,7 @@ function App() {
                   SMS Engineering operates its own RMC plant supplying all grades of ready mix concrete — from standard residential mixes to high-strength custom designs — delivered to your site across Delhi NCR.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-3">
-                  {['M10','M15','M20','M25','M30','M35','M40','M45','M50','Custom Mix'].map((grade) => (
+                  {['M10', 'M15', 'M20', 'M25', 'M30', 'M35', 'M40', 'M45', 'M50', 'Custom Mix'].map((grade) => (
                     <span key={grade} className="rounded-full border border-red-500/30 bg-red-600/10 px-3 py-1.5 text-sm font-black text-red-300">
                       {grade}
                     </span>
@@ -590,8 +590,6 @@ function App() {
                     <Phone className="mt-1 shrink-0 text-red-100" />
                     <div>
                       <p className="font-bold">Alternate Phone</p>
-                      <a href="tel:+919350889901" className="text-red-50 hover:text-white">+91 93508 89901</a>
-                      <br />
                       <a href="tel:01143018330" className="text-red-50 hover:text-white">011 43018330</a>
                     </div>
                   </div>
@@ -632,86 +630,86 @@ function App() {
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-5 p-6 sm:p-10">
-                  <div className="grid gap-5 sm:grid-cols-2">
-                    <label className="block">
-                      <span className="mb-2 block text-sm font-bold text-slate-700">Your Name</span>
-                      <input
-                        type="text"
-                        name="name"
-                        value={form.name}
-                        onChange={handleChange}
-                        required
-                        className="w-full rounded-lg border border-slate-300 p-3 outline-none transition focus:border-red-600 focus:ring-2 focus:ring-red-500/30"
-                        placeholder="Full name"
-                      />
-                    </label>
-                    <label className="block">
-                      <span className="mb-2 block text-sm font-bold text-slate-700">Phone Number</span>
-                      <input
-                        type="tel"
-                        name="phone"
-                        value={form.phone}
-                        onChange={handleChange}
-                        required
-                        className="w-full rounded-lg border border-slate-300 p-3 outline-none transition focus:border-red-600 focus:ring-2 focus:ring-red-500/30"
-                        placeholder="+91 _____ _____"
-                      />
-                    </label>
-                  </div>
-
+                <div className="grid gap-5 sm:grid-cols-2">
                   <label className="block">
-                    <span className="mb-2 block text-sm font-bold text-slate-700">Email Address</span>
+                    <span className="mb-2 block text-sm font-bold text-slate-700">Your Name</span>
                     <input
-                      type="email"
-                      name="email"
-                      value={form.email}
-                      onChange={handleChange}
-                      className="w-full rounded-lg border border-slate-300 p-3 outline-none transition focus:border-red-600 focus:ring-2 focus:ring-red-500/30"
-                      placeholder="your@email.com"
-                    />
-                  </label>
-
-                  <label className="block">
-                    <span className="mb-2 block text-sm font-bold text-slate-700">Requirement Type</span>
-                    <select
-                      name="requirement"
-                      value={form.requirement}
+                      type="text"
+                      name="name"
+                      value={form.name}
                       onChange={handleChange}
                       required
-                      className="w-full rounded-lg border border-slate-300 bg-white p-3 outline-none transition focus:border-red-600 focus:ring-2 focus:ring-red-500/30"
-                    >
-                      <option value="">Select requirement...</option>
-                      <option>Ready Mix Concrete (RMC)</option>
-                      <option>Diesel Generator Set</option>
-                      <option>Hydraulic / Industrial Machinery</option>
-                      <option>Concrete Pump Spare Parts</option>
-                      <option>Earth Moving Equipment Spares</option>
-                      <option>Electrical / PLC / AMF Panel</option>
-                      <option>Other Machinery Parts</option>
-                    </select>
-                  </label>
-
-                  <label className="block">
-                    <span className="mb-2 block text-sm font-bold text-slate-700">
-                      Part Details / Machine Model / Quantity
-                    </span>
-                    <textarea
-                      name="details"
-                      value={form.details}
-                      onChange={handleChange}
-                      rows={5}
-                      placeholder="Describe the part, machine model, brand, and quantity needed..."
                       className="w-full rounded-lg border border-slate-300 p-3 outline-none transition focus:border-red-600 focus:ring-2 focus:ring-red-500/30"
+                      placeholder="Full name"
                     />
                   </label>
+                  <label className="block">
+                    <span className="mb-2 block text-sm font-bold text-slate-700">Phone Number</span>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={form.phone}
+                      onChange={handleChange}
+                      required
+                      className="w-full rounded-lg border border-slate-300 p-3 outline-none transition focus:border-red-600 focus:ring-2 focus:ring-red-500/30"
+                      placeholder="+91 _____ _____"
+                    />
+                  </label>
+                </div>
 
-                  <button
-                    type="submit"
-                    className="w-full rounded-lg bg-red-600 py-4 font-black text-white shadow-lg shadow-red-200 transition hover:-translate-y-0.5 hover:bg-red-700"
+                <label className="block">
+                  <span className="mb-2 block text-sm font-bold text-slate-700">Email Address</span>
+                  <input
+                    type="email"
+                    name="email"
+                    value={form.email}
+                    onChange={handleChange}
+                    className="w-full rounded-lg border border-slate-300 p-3 outline-none transition focus:border-red-600 focus:ring-2 focus:ring-red-500/30"
+                    placeholder="your@email.com"
+                  />
+                </label>
+
+                <label className="block">
+                  <span className="mb-2 block text-sm font-bold text-slate-700">Requirement Type</span>
+                  <select
+                    name="requirement"
+                    value={form.requirement}
+                    onChange={handleChange}
+                    required
+                    className="w-full rounded-lg border border-slate-300 bg-white p-3 outline-none transition focus:border-red-600 focus:ring-2 focus:ring-red-500/30"
                   >
-                    SEND INQUIRY
-                  </button>
-                </form>
+                    <option value="">Select requirement...</option>
+                    <option>Ready Mix Concrete (RMC)</option>
+                    <option>Diesel Generator Set</option>
+                    <option>Hydraulic / Industrial Machinery</option>
+                    <option>Concrete Pump Spare Parts</option>
+                    <option>Earth Moving Equipment Spares</option>
+                    <option>Electrical / PLC / AMF Panel</option>
+                    <option>Other Machinery Parts</option>
+                  </select>
+                </label>
+
+                <label className="block">
+                  <span className="mb-2 block text-sm font-bold text-slate-700">
+                    Part Details / Machine Model / Quantity
+                  </span>
+                  <textarea
+                    name="details"
+                    value={form.details}
+                    onChange={handleChange}
+                    rows={5}
+                    placeholder="Describe the part, machine model, brand, and quantity needed..."
+                    className="w-full rounded-lg border border-slate-300 p-3 outline-none transition focus:border-red-600 focus:ring-2 focus:ring-red-500/30"
+                  />
+                </label>
+
+                <button
+                  type="submit"
+                  className="w-full rounded-lg bg-red-600 py-4 font-black text-white shadow-lg shadow-red-200 transition hover:-translate-y-0.5 hover:bg-red-700"
+                >
+                  SEND INQUIRY
+                </button>
+              </form>
             </div>
           </div>
         </section>
