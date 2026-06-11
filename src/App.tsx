@@ -525,7 +525,7 @@ function App() {
           <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 px-4 text-center sm:px-6 md:flex-row md:justify-between md:text-left">
             <div>
               <h2 className="text-2xl font-black text-white sm:text-3xl">
-                Need a specific spare part or machinery?
+                Need Spare parts, machinery or RMC?
               </h2>
               <p className="mt-2 text-red-100">
                 Call or send an enquiry — the team responds quickly with availability and pricing.
